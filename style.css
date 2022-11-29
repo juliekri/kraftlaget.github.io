@@ -1,0 +1,387 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #fefefe;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a {
+  outline: none;
+}
+
+ul {
+  gap: 30px;
+  display: flex;
+}
+
+.navbar-container ul li {
+  display: inline-block;
+  font-size: 20px;
+}
+
+.navbar-container ul li a {
+  color: #132c4f;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  transition: color 0.5s;
+}
+
+.navbar-container ul li .underline {
+  height: 3px;
+  background-color: transparent;
+  width: 0%;
+  transition: width 0.2s, background-color 0.2s;
+  margin: 0 auto;
+}
+
+.navbar-container ul li:hover .underline {
+  background-color: #33bcdb;
+  width: 100%;
+}
+
+.nav-link[selected="active-link"] .underline {
+  background-color: #33bcdb;
+  width: 100%;
+}
+
+.navbar-container ul li:hover a {
+  transform: scale(1.1);
+  color: rgba(0, 0, 0, 0.83);
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  gap: 24%;
+  padding: 10px 0px 10px 150px;
+  height: 70px;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  margin-top: -10px;
+  background-color: #fefefe;
+  width: 100%;
+}
+
+.logo-header {
+  font-size: 30px;
+}
+
+.logo-footer {
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+.nav-header {
+  display: flex;
+  gap: 60px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.image-container {
+  display: flex;
+  width: 100vw;
+  position: relative;
+}
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.text-container {
+  color: white;
+  font-size: 32px;
+  margin: 0 auto;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  height: 550px;
+}
+.products-meeting {
+  gap: 50px;
+  display: flex;
+  position: absolute;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.products-box {
+  width: 28%;
+  height: 80%;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #55c3dd;
+  border-radius: 10px;
+  margin-top: 40px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.products-box:hover {
+  transform: scale(1.04);
+}
+
+.product-img {
+  width: 50%;
+  height: 74%;
+  align-self: center;
+}
+
+.product-img-box {
+  width: 90px;
+  height: 60px;
+  background-color: #55c3dd;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.product-header {
+  font-size: 22px;
+  text-align: center;
+  padding-top: 20px;
+  color: #132c4f;
+}
+
+.product-span {
+  width: 80%;
+  font-size: 18px;
+  color: #677fa0;
+  padding-left: 36px;
+  line-height: 1.3;
+}
+.about-us-container {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+#about-us {
+  position: relative;
+  top: -70px;
+}
+
+#we-offer {
+  position: relative;
+  top: -70px;
+}
+
+.about-img {
+  background-size: contain;
+}
+
+.about-text {
+  border: 1px solid #40b0cc;
+  height: 250px;
+  position: relative;
+  margin: 36px 0px 0px -120px;
+  background-color: #7dd1e5;
+  border-radius: 15px;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-left: 20px;
+}
+
+#kraftlaget-img {
+  width: 700px;
+  height: auto;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+.meeting-room-box {
+  background-color: #fff;
+  box-shadow: 1px 1px 3px 0px #8080805c;
+  border-radius: 6px;
+  position: relative;
+  top: -20px;
+  width: 327px;
+  height: 246px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.minilager {
+  background-color: #f4f4f4;
+  height: 410px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 327px;
+}
+
+.meeting-room-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  height: 684px;
+}
+
+.meeting-room-img {
+  width: 350px;
+  align-self: center;
+  border-radius: 10px;
+}
+
+.img-container-main {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  gap: 33px;
+  justify-content: center;
+}
+
+.meeting-room-btn {
+  width: 120px;
+  height: 50px;
+  background-color: #81bdd5;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.contact-button-container {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+.contact-button {
+  background-color: rgba(5, 170, 208, 0.66);
+  width: 240px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  cursor: pointer;
+  border-radius: 10px;
+  color: #ffffffe6;
+  box-shadow: 0px 0px 1px #00353e5e;
+  transition: transform 0.2s;
+}
+
+.contact-button:hover {
+  transform: scale(1.04);
+}
+
+.office-container {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  background-color: #f9f9f9;
+}
+.office-text-container {
+  text-align: center;
+  width: 50%;
+}
+
+.contact-form-container {
+  width: 100%;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  justify-content: center;
+}
+
+.contact-form {
+  height: 350px;
+  background-color: #fdfdfd;
+  gap: 10px;
+  width: 30%;
+  border-radius: 25px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  box-shadow: 1px 1px 3px 0px #8080805c;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #33bcdb;
+}
+
+.submit-button {
+  height: 35px;
+  width: 190px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(5, 170, 208, 0.66);
+  color: #eeeff1;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.submit-button:disabled {
+  background-color: #c2dee8;
+  color: #eeeff1;
+  cursor: not-allowed;
+}
+
+.logo-img {
+  width: 300px;
+}
+
+input {
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+input[type="text"] {
+  border: 2px solid rgba(5, 170, 208, 0.66);
+}
+input[type="email"] {
+  border: 2px solid rgba(5, 170, 208, 0.66);
+}
+
+input:focus {
+  border: 2px solid rgba(93, 221, 249, 0.895);
+  outline: none;
+}
+
+li * {
+  user-select: none;
+}
+
+hr {
+  margin-top: 30px;
+  color: #55c3dd;
+  width: 65%;
+}
