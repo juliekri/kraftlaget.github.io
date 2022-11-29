@@ -197,25 +197,18 @@ ul {
 
 .about-img {
   background-size: contain;
+  transform: translate(2px, -21px);
 }
 
 .about-text {
-  border: 1px solid #40b0cc;
-  height: 250px;
-  position: relative;
-  margin: 36px 0px 0px -120px;
-  background-color: #7dd1e5;
-  border-radius: 15px;
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  padding-left: 20px;
+  line-height: 1.8;
+  width: 28%;
+  margin-left: 76px;
 }
 
 #kraftlaget-img {
-  width: 700px;
-  height: auto;
+  width: 1000px;
+  height: 500px;
   border-radius: 10px;
   opacity: 0.9;
 }
