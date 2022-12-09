@@ -31,9 +31,20 @@
             <div class="underline"></div>
           </li>
         </ul>
+
+        <div class="hamburger" onclick="handleShowDropDown(event)">
+          <span id="navBar" class="bar"></span>
+          <span id="navBar" class="bar"></span>
+          <span id="navBar" class="bar"></span>
+        </div>
+        <div class="showDropDown">
+          <a class="a-smallscreen" href="#">HJEM </a>
+          <a class="a-smallscreen" href="#about-us">OM OSS</a>
+          <a class="a-smallscreen" href="#we-offer">VI TILBYR</a>
+          <a class="a-smallscreen" href="#contact-form">KONTAKT OSS</a>
+        </div>
       </div>
     </div>
-
     <div class="image-container">
       <img class="image" src="images/kraftlaget.jpg" />
       <div class="text-container">
@@ -129,7 +140,7 @@
             Kraftlaget
           </h2>
           <div style="width: 95%">
-            <span style="font-size: 18px; line-height: 1.5"
+            <span id="about-us-text"
               >Eiendommen er opprinnelig et gammelt meieri som ble til i starten
               av 1900-tallet. Solør Kraftlag kjøpte eiendommen og tok den i bruk
               i 1977. I 2017 ble det besluttet å legge ned driften av Eidsiva
@@ -143,12 +154,18 @@
     </div>
     <div class="meeting-room-container" id="meeting-room-container">
       <h1 style="color: #132c4f">MØTEROM</h1>
-      <div class="products">
+      <div class="products" id="meeting-room">
         <div id="flisa">
           <img class="meeting-room-img" src="images/flisa.jpg" />
           <div class="meeting-room-box" id="meeting-room">
-            <h1 class="product-header" style="color: #55c3dd">MØTEROM FLISA</h1>
-            <span class="product-span"
+            <h1
+              class="product-header"
+              id="header-meeting"
+              style="color: #55c3dd"
+            >
+              MØTEROM FLISA
+            </h1>
+            <span class="product-span" id="product-span-meeting"
               ><span style="font-size: 20px; color: #55c3dd"
                 >Antall plasser:</span
               >
@@ -166,10 +183,14 @@
         <div id="skansen">
           <img class="meeting-room-img" src="images/skansen.jpg" />
           <div class="meeting-room-box">
-            <h1 class="product-header" style="color: #55c3dd">
+            <h1
+              class="product-header"
+              id="header-meeting"
+              style="color: #55c3dd"
+            >
               MØTEROM SKANSEN
             </h1>
-            <span class="product-span">
+            <span class="product-span" id="product-span-meeting">
               <span style="font-size: 20px; color: #55c3dd"
                 >Antall plasser:</span
               >
@@ -188,8 +209,14 @@
         <div id="hof">
           <img class="meeting-room-img" src="images/hof.jpg" />
           <div class="meeting-room-box">
-            <h1 class="product-header" style="color: #55c3dd">MØTEROM HOF</h1>
-            <span class="product-span">
+            <h1
+              class="product-header"
+              id="header-meeting"
+              style="color: #55c3dd"
+            >
+              MØTEROM HOF
+            </h1>
+            <span class="product-span" id="product-span-meeting">
               <span style="font-size: 20px; color: #55c3dd"
                 >Antall plasser:</span
               >
@@ -206,7 +233,11 @@
           </div>
         </div>
       </div>
-      <div class="contact-button" onclick="contactForm()">
+      <div
+        class="contact-button"
+        id="contact-button-meeting"
+        onclick="contactForm()"
+      >
         <span style="font-size: 26px; align-self: center">Ta kontakt</span>
       </div>
     </div>
@@ -222,11 +253,11 @@
           style="background-color: #f4f4f4; height: 400px"
           id="minilager"
         >
-          <h1 class="product-header" style="color: #55c3dd">
+          <h1 class="product-header" id="header-meeting" style="color: #55c3dd">
             MINILAGER 10 &#13217;
           </h1>
 
-          <span class="product-span"
+          <span class="product-span" id="product-span-meeting"
             >Pris pr. år: 5200,- <br />
             Pris pr. måned: 600,-
           </span>
@@ -237,10 +268,10 @@
           />
         </div>
         <div class="minilager" style="background-color: #f4f4f4; height: 400px">
-          <h1 class="product-header" style="color: #55c3dd">
+          <h1 class="product-header" id="header-meeting" style="color: #55c3dd">
             MINILAGER 5 &#13217;
           </h1>
-          <span class="product-span"
+          <span class="product-span" id="product-span-meeting"
             >Pris pr. år: 3700,- <br />
             Pris pr. måned: 500,-
           </span>
