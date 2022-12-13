@@ -140,11 +140,12 @@ ul {
   gap: 50px;
   width: 100%;
   margin-top: 20px;
+  align-items: center;
 }
 
 .products-box {
   width: 28%;
-  height: 80%;
+  height: 90%;
   align-items: center;
   text-align: center;
   display: flex;
@@ -194,7 +195,7 @@ ul {
   width: 100%;
   height: 500px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: #fff;
 }
 
@@ -239,7 +240,7 @@ ul {
   position: relative;
   top: -20px;
   width: 327px;
-  height: 246px;
+  height: 255px;
   left: 10px;
   display: flex;
   flex-direction: column;
@@ -253,6 +254,7 @@ ul {
   flex-direction: column;
   border-radius: 10px;
   width: 327px;
+  height: 400px;
 }
 
 .meeting-room-container {
@@ -264,10 +266,26 @@ ul {
   height: 684px;
 }
 
+#sub-heading-meeting {
+  font-size: 20px;
+  color: #55c3dd;
+}
+
 .meeting-room-img {
   width: 350px;
   align-self: center;
   border-radius: 10px;
+}
+
+.minilager-img {
+  width: 200px;
+  align-self: center;
+  border-radius: 10px;
+}
+
+.meeting-room-product {
+  display: flex;
+  gap: 20px;
 }
 
 .img-container-main {
@@ -278,6 +296,11 @@ ul {
   justify-content: center;
 }
 
+#minilager-span {
+  color: #677fa0;
+  padding-left: 0px;
+}
+
 .meeting-room-btn {
   width: 120px;
   height: 50px;
@@ -286,6 +309,12 @@ ul {
   display: flex;
   justify-content: center;
   align-self: center;
+}
+
+.minilager-box {
+  display: flex;
+  padding: 10px;
+  gap: 4px;
 }
 
 .contact-button-container {
@@ -305,6 +334,8 @@ ul {
   color: #ffffffe6;
   box-shadow: 0px 0px 1px #00353e5e;
   transition: transform 0.2s;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .contact-button:hover {
@@ -427,7 +458,7 @@ hr {
   }
 
   .showDropDown.hide {
-    width: 250px;
+    width: 100%;
     height: 217px;
     background-color: #212330;
     transform: translate(-118px, 21px);
@@ -435,6 +466,8 @@ hr {
     display: flex;
     position: absolute;
     flex-direction: column;
+    right: -107px;
+    top: 36px;
   }
 
   .showDropDown {
@@ -461,91 +494,148 @@ hr {
 
   .image-container {
     height: auto;
+    top: 62px;
+    left: -8px;
   }
 
   .text-container {
     font-size: 18px;
-    top: 60%;
     width: 80%;
   }
 
   hr {
     margin-bottom: 30px;
+    margin-top: 90px;
   }
 
   h1 {
     font-size: 22px;
+    margin-top: 20px;
   }
 
   .product-container {
-    height: 600px;
+    height: 24%;
   }
 
+  .products {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .products-box {
+    width: 80%;
+    align-self: center;
+    margin-top: 0;
+  }
   .products span {
     padding-left: 0px;
   }
   .about-text {
-    transform: translate(10px, 0px);
-    margin-left: 0px;
     line-height: 0;
-    width: 40%;
+    width: 100%;
+    padding: 20px;
+    margin-left: 0px;
+    z-index: 4;
   }
 
   .product-header {
     color: #132c4f;
     font-size: 22px;
     text-align: left;
+    padding-top: 0;
   }
 
   #about-us-text {
-    font-size: 20px;
+    font-size: 18px;
+    color: #132c4f;
   }
 
   .about-img {
-    width: 600px;
+    width: 100%;
     transform: translate(2px, -19px);
+    position: absolute;
   }
 
   #kraftlaget-img {
+    opacity: 0.6;
+    position: absolute;
+    object-fit: cover;
     width: 100%;
-    height: 361px;
+    height: 363px;
+    right: 0px;
   }
 
   .about-us-container {
     height: 363px;
   }
-  .meeting-room-container {
-    justify-content: flex-start;
-    height: 1118px;
-  }
+
   #meeting-room {
     display: flex;
     flex-direction: column;
   }
-  #flisa {
-    transform: translate(112px, 10px);
+
+  .meeting-room-box {
+    width: 90%;
   }
 
+  .meeting-room-product {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .meeting-room-img {
+    width: 90px;
+    height: 57px;
+    position: relative;
+    top: 209px;
+    z-index: 4;
+    right: -200px;
+  }
+
+  #flisa,
   #skansen {
-    transform: translate(500px, -500px);
+    height: 252px;
   }
-  #hof {
-    transform: translate(312px, -555px);
+
+  .minilager-img {
+    width: 200px;
   }
-  #contact-button-meeting {
-    padding: 12px;
-    transform: translate(-3px, -520px);
+
+  .meeting-room-container {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  .minilager {
+    width: 90%;
+    height: 230px;
+  }
+  .minilager-box {
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
   }
 
   #product-span-meeting {
-    padding-left: 36px;
+    padding-left: 25px;
+  }
+
+  #sub-heading-meeting {
+    font-size: 18px;
   }
 
   #header-meeting {
     padding-left: 36px;
+    font-size: 20px;
   }
   .office-container {
-    height: 338px;
+    height: auto;
+  }
+  .office-text-container {
+    width: 90%;
   }
   .contact-form {
     width: 74%;
