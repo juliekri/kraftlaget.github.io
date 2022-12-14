@@ -312,7 +312,7 @@ ul {
 #minilager-span {
   color: #677fa0;
   width: 100%;
-  text-align: start;
+  text-align: center;
 }
 
 .meeting-room-btn {
@@ -703,6 +703,10 @@ hr {
 
   #office-text-span {
     font-size: 18px;
+  }
+
+  #header-minilager {
+    text-align: center;
   }
 
   .contact-form {
