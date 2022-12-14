@@ -38,10 +38,27 @@
           <span id="navBar" class="bar"></span>
         </div>
         <div class="showDropDown">
-          <a class="a-smallscreen" href="#">HJEM </a>
-          <a class="a-smallscreen" href="#about-us">OM OSS</a>
-          <a class="a-smallscreen" href="#we-offer">VI TILBYR</a>
-          <a class="a-smallscreen" href="#contact-form">KONTAKT OSS</a>
+          <a class="a-smallscreen" onclick="handleShowDropDown(event)" href="#"
+            >HJEM
+          </a>
+          <a
+            class="a-smallscreen"
+            onclick="handleShowDropDown(event)"
+            href="#about-us"
+            >OM OSS</a
+          >
+          <a
+            class="a-smallscreen"
+            onclick="handleShowDropDown(event)"
+            href="#we-offer"
+            >VI TILBYR</a
+          >
+          <a
+            class="a-smallscreen"
+            onclick="handleShowDropDown(event)"
+            href="#contact-form"
+            >KONTAKT OSS</a
+          >
         </div>
       </div>
     </div>
@@ -59,13 +76,7 @@
     <div id="we-offer"></div>
     <div class="product-container">
       <h1 style="color: #132c4f">VI TILBYR</h1>
-      <span
-        style="
-          color: #677fa0;
-          font-size: 18px;
-          text-align: center;
-          line-height: 1.5;
-        "
+      <span id="we-offer-text"
         >Vi kan tilby ledige moderne og lyse møte- og kursrom med kapasitet fra
         4 til 30 personer. Vi har fortsatt igjen ledige kontorplasser, både
         <br />
@@ -83,13 +94,17 @@
           id="scroll-to-meeting-room"
           onclick="scrollToId(event)"
         >
-          <h1 class="product-header">MØTEROM</h1>
-          <span class="product-span"
+          <h1 class="product-header" id="scroll-to-meeting-room">MØTEROM</h1>
+          <span class="product-span" id="scroll-to-meeting-room"
             >Møterom ligger i Kraftlagets lokaler i 2. etasje, ta kontakt for
             bestilling.
           </span>
-          <div class="product-img-box">
-            <img class="product-img" src="images/kontor.svg" />
+          <div class="product-img-box" id="scroll-to-meeting-room">
+            <img
+              id="scroll-to-meeting-room"
+              class="product-img"
+              src="images/kontor.svg"
+            />
           </div>
         </div>
         <div
@@ -97,13 +112,17 @@
           id="scroll-to-minilager"
           onclick="scrollToId(event)"
         >
-          <h1 class="product-header">MINILAGER</h1>
-          <span class="product-span"
+          <h1 class="product-header" id="scroll-to-minilager">MINILAGER</h1>
+          <span class="product-span" id="scroll-to-minilager"
             >Minilagerne ligger i Kraftlagets lokaler, og består av minilager på
             5 – 10 &#13217;.
           </span>
-          <div class="product-img-box">
-            <img class="product-img" src="images/minilager.svg" />
+          <div class="product-img-box" id="scroll-to-minilager">
+            <img
+              id="scroll-to-minilager"
+              class="product-img"
+              src="images/minilager.svg"
+            />
           </div>
         </div>
         <div
@@ -111,12 +130,16 @@
           id="scroll-to-office"
           onclick="scrollToId(event)"
         >
-          <h1 class="product-header">KONTORER</h1>
-          <span class="product-span"
+          <h1 id="scroll-to-office" class="product-header">KONTORER</h1>
+          <span id="scroll-to-office" class="product-span"
             >Kontorer til leie. Ta kontakt for mer informasjon.</span
           >
-          <div class="product-img-box">
-            <img class="product-img" src="images/chair.svg" />
+          <div class="product-img-box" id="scroll-to-office">
+            <img
+              id="scroll-to-office"
+              class="product-img"
+              src="images/chair.svg"
+            />
           </div>
         </div>
       </div>
@@ -152,8 +175,12 @@
       <h1 style="color: #132c4f">MØTEROM</h1>
       <div class="meeting-room-product">
         <div id="flisa">
-          <img class="meeting-room-img" src="images/flisa.jpg" />
-          <div class="meeting-room-box" id="meeting-room">
+          <img
+            class="meeting-room-img"
+            id="meeting-room-img-flisa"
+            src="images/flisa.jpg"
+          />
+          <div class="meeting-room-box" id="meeting-room-flisa">
             <h1
               class="product-header"
               id="header-meeting"
@@ -174,9 +201,14 @@
             >
           </div>
         </div>
+        <hr class="smallscreen-hr" />
         <div id="skansen">
-          <img class="meeting-room-img" src="images/skansen.jpg" />
-          <div class="meeting-room-box" id="meeting-room">
+          <img
+            class="meeting-room-img"
+            id="meeting-room-img-skansen"
+            src="images/skansen.jpg"
+          />
+          <div class="meeting-room-box" id="meeting-room-skansen">
             <h1
               class="product-header"
               id="header-meeting"
@@ -198,9 +230,14 @@
             >
           </div>
         </div>
+        <hr class="smallscreen-hr" />
         <div id="hof">
-          <img class="meeting-room-img" src="images/hof.jpg" />
-          <div class="meeting-room-box" id="meeting-room">
+          <img
+            class="meeting-room-img"
+            id="meeting-room-img-hof"
+            src="images/hof.jpg"
+          />
+          <div class="meeting-room-box" id="meeting-room-hof">
             <h1
               class="product-header"
               id="header-meeting"
@@ -235,30 +272,26 @@
     <div class="product-container" style="background-color: #fff">
       <h1 style="color: #132c4f">MINILAGER</h1>
       <div class="products" id="minilager-product">
-        <div
-          class="products-box"
-          style="background-color: #f4f4f4"
-          id="minilager"
-        >
+        <div class="products-box" id="minilager">
           <h1 class="product-header" id="header-meeting" style="color: #55c3dd">
             MINILAGER 10 &#13217;
           </h1>
           <div class="minilager-box">
             <span class="product-span" id="minilager-span"
-              >Pris pr. år: 5200,- <br />
-              Pris pr. måned: 600,-
+              ><span id="sub-heading-meeting">Pris pr. år:</span> 5200,- <br />
+              <span id="sub-heading-meeting">Pris pr. måned:</span> 600,-
             </span>
             <img class="minilager-img" src="images/flisa.jpg" />
           </div>
         </div>
-        <div class="products-box" style="background-color: #f4f4f4">
+        <div class="products-box" id="minilager">
           <h1 class="product-header" id="header-meeting" style="color: #55c3dd">
             MINILAGER 5 &#13217;
           </h1>
           <div class="minilager-box">
             <span class="product-span" id="minilager-span"
-              >Pris pr. år: 3700,- <br />
-              Pris pr. måned: 500,-
+              ><span id="sub-heading-meeting">Pris pr. år:</span> 3700,- <br />
+              <span id="sub-heading-meeting">Pris pr. måned:</span> 500,-
             </span>
             <img class="minilager-img" src="images/skansen.jpg" />
           </div>
@@ -273,8 +306,8 @@
 
     <div class="office-container" id="office">
       <div class="office-text-container">
-        <h1 style="color: #132c4f">Kontorlokaler</h1>
-        <span style="font-size: 20px; color: #677fa0"
+        <h1 id="office-h1">Kontorlokaler</h1>
+        <span id="office-text-span"
           >Vi har flere ledige kontorer så det er best å ta kontakt for en
           uforpliktende prat. <br />Kontorene er lyse, har friskluftanlegg og
           bygget er tilknyttet fibernett. Det er ledig for bedrifter med en
@@ -294,7 +327,7 @@
         >
       </div>
     </div>
-
+    <div id="scroll-to-contact-form" style="height: 40px"></div>
     <div class="contact-form-container" id="contact-form">
       <form class="contact-form" name="form">
         <h1 style="color: #132c4f">KONTAKT OSS</h1>

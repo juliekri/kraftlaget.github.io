@@ -12,17 +12,17 @@ function scrollToId(event) {
   const meetingRoom = document.getElementById("meeting-room-container");
   const miniLager = document.getElementById("minilager");
   const office = document.getElementById("office");
-  if (event.target === document.getElementById("scroll-to-meeting-room")) {
+  if (event.target.matches("#scroll-to-meeting-room")) {
     meetingRoom.scrollIntoView({
       behavior: "smooth",
     });
     return;
-  } else if (event.target === document.getElementById("scroll-to-minilager")) {
+  } else if (event.target.matches("#scroll-to-minilager")) {
     miniLager.scrollIntoView({
       behavior: "smooth",
     });
     return;
-  } else if (event.target === document.getElementById("scroll-to-office")) {
+  } else if (event.target.matches("#scroll-to-office")) {
     office.scrollIntoView({
       behavior: "smooth",
     });
@@ -31,7 +31,10 @@ function scrollToId(event) {
 }
 
 function contactForm() {
-  window.scrollTo(0, 100000);
+  const contactForm = document.getElementById("scroll-to-contact-form");
+  contactForm.scrollIntoView({
+    behavior: "smooth",
+  });
 
   return;
 }
@@ -66,7 +69,7 @@ window.onload = sizeHandler;
 
 function handleShowDropDown(event) {
   event.target.parentElement;
-  console.log(event);
+
   let hideDropDown = document.querySelector(".showDropDown.hide");
 
   if (hideDropDown) {
