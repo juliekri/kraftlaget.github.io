@@ -463,15 +463,20 @@ hr {
     display: none;
   }
 
+  .logo-header {
+    width: 62%;
+  }
+
   .navbar-container {
     display: flex;
     flex-direction: column;
+    width: 20%;
   }
 
   .header {
-    gap: 50%;
     padding: 10px 0 10px 15px;
     height: 50px;
+    justify-content: space-between;
   }
 
   .logo-img {
