@@ -529,12 +529,12 @@ hr {
 
   #header-front-image {
     font-size: 26px;
-    color: #212330;
+    color: #212330de;
   }
 
   #sub-header-front-image {
     font-size: 20px;
-    color: #212330;
+    color: #212330de;
     font-weight: bold;
   }
 
@@ -600,7 +600,7 @@ hr {
   }
 
   #we-offer-text {
-    padding-left: 20px;
+    padding: 20px;
   }
 
   #about-us-text {
@@ -657,6 +657,7 @@ hr {
     height: 200px;
     position: relative;
     top: -20px;
+    box-shadow: 1px 1px 3px 0px #8080805c;
   }
 
   #meeting-room-img-flisa {
@@ -737,6 +738,10 @@ hr {
 
   .contact-form {
     width: 74%;
+  }
+
+  .contact-form-container {
+    height: 450px;
   }
 
   .smallscreen-hr {
