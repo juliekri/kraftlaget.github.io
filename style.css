@@ -530,6 +530,7 @@ hr {
   .image-container {
     top: 62px;
     left: -8px;
+    display: inline-block;
   }
 
   .image {
