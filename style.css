@@ -581,9 +581,11 @@ hr {
     align-self: center;
     margin-top: 0;
   }
+
   .products span {
     padding-left: 0px;
   }
+
   .about-text {
     line-height: 0;
     width: 100%;
