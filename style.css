@@ -79,7 +79,6 @@ ul {
   align-items: center;
   position: fixed;
   z-index: 100;
-  margin-top: -10px;
   background-color: #212330;
   width: 100%;
 }
@@ -112,10 +111,11 @@ ul {
   width: 100%;
   height: auto;
   border-radius: 10px;
+  opacity: 0.5;
 }
 
 .text-container {
-  color: white;
+  color: #212330;
   font-size: 32px;
   margin: 0 auto;
   transform: translate(-50%, -50%);
@@ -359,7 +359,7 @@ ul {
 
 .office-container {
   width: 100%;
-  height: 300px;
+  height: 360px;
   display: flex;
   justify-content: center;
   background-color: #f9f9f9;
@@ -464,7 +464,7 @@ hr {
   }
 
   .logo-header {
-    width: 62%;
+    width: 70%;
   }
 
   .navbar-container {
