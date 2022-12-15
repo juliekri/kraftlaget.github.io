@@ -37,7 +37,7 @@ ul {
 }
 
 .navbar-container ul li a {
-  color: #132c4f;
+  color: #fefefe;
   text-decoration: none;
   display: inline-block;
   padding: 10px;
@@ -80,7 +80,7 @@ ul {
   position: fixed;
   z-index: 100;
   margin-top: -10px;
-  background-color: #fefefe;
+  background-color: #212330;
   width: 100%;
 }
 
@@ -475,7 +475,7 @@ hr {
 
   .header {
     padding: 10px 0 10px 15px;
-    height: 50px;
+    height: 52px;
     justify-content: space-between;
   }
 
@@ -523,13 +523,12 @@ hr {
     width: 30px;
     height: 4px;
     margin-top: 3px;
-    background-color: #212330;
+    background-color: #fefefe;
     border-radius: 6px;
   }
 
   .image-container {
     top: 62px;
-    left: -8px;
     display: inline-block;
   }
 
