@@ -527,6 +527,17 @@ hr {
     border-radius: 6px;
   }
 
+  #header-front-image {
+    font-size: 26px;
+    color: #212330;
+  }
+
+  #sub-header-front-image {
+    font-size: 20px;
+    color: #212330;
+    font-weight: bold;
+  }
+
   .image-container {
     top: 62px;
     display: inline-block;
@@ -536,11 +547,12 @@ hr {
     max-width: 100% !important;
     max-height: 100% !important;
     border-radius: 0px;
+    opacity: 0.5;
   }
 
   .text-container {
     font-size: 18px;
-    width: 80%;
+    width: 95%;
   }
 
   hr {
