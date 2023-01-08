@@ -344,7 +344,6 @@ ul {
 }
 
 .contact-button-container {
-  height: 100px;
   display: flex;
   align-self: center;
 }
@@ -378,6 +377,7 @@ ul {
 }
 .office-text-container {
   width: 50%;
+  margin-bottom: 20px;
 }
 
 #office-text-span {
@@ -471,6 +471,13 @@ hr {
   visibility: hidden;
 }
 
+#map{
+  width:30%;
+  height:280px;
+  border:0;
+   border-radius: 10px;
+}
+
 @media screen and (max-width: 1200px) {
   ul {
     display: none;
@@ -494,6 +501,10 @@ hr {
 
   .logo-img {
     width: 200px;
+  }
+
+  #office-h1{
+    font-size: 24px;
   }
 
   .hamburger {
@@ -559,6 +570,7 @@ hr {
   .image {
     max-width: 100% !important;
     max-height: 100% !important;
+    height: 220px;
     border-radius: 0px;
     opacity: 0.5;
   }
@@ -711,8 +723,8 @@ hr {
   }
 
   #minilager {
-    width: 90%;
-    height: 256px;
+    width: 300px;
+    height: 225px;
   }
   .minilager-box {
     gap: 10px;
@@ -756,7 +768,14 @@ hr {
   }
 
   .contact-form-container {
-    height: 450px;
+    height: 700px;
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+
+  #contact-button-lager{
+    margin-top: 0;
+    
   }
 
   .smallscreen-hr {
@@ -764,5 +783,10 @@ hr {
     margin-top: 0;
     margin-bottom: 0;
     visibility: visible;
+  }
+
+  #map{
+    width: 80%;
+margin-bottom: 20px;
   }
 }
