@@ -198,7 +198,7 @@ ul {
   line-height: 1.3;
 }
 
-#product-span-meeting{
+#product-span-meeting {
   padding-left: 30px;
 }
 
@@ -274,7 +274,7 @@ ul {
   height: 268px;
 }
 
-#minilager:hover{
+#minilager:hover {
   transform: scale(1);
 }
 
@@ -287,7 +287,7 @@ ul {
   height: 684px;
 }
 
-#meeting-room-h1{
+#meeting-room-h1 {
   margin-top: 20px;
 }
 
@@ -366,7 +366,6 @@ ul {
 .contact-button:hover {
   transform: scale(1.04);
 }
-
 
 .office-container {
   width: 100%;
@@ -471,12 +470,25 @@ hr {
   visibility: hidden;
 }
 
-#map{
-  width:30%;
-  height:280px;
-  border:0;
-   border-radius: 10px;
-   box-shadow: 1px 1px 3px 0px #8080805c;
+#map {
+  width: 30%;
+  height: 280px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px 0px #8080805c;
+}
+
+#scroll-to-contact-form {
+  height: 40px;
+  text-align: center;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#contact-span {
+  font-size: 20px;
+  color: #677fa0;
 }
 
 @media screen and (max-width: 1200px) {
@@ -504,7 +516,7 @@ hr {
     width: 200px;
   }
 
-  #office-h1{
+  #office-h1 {
     font-size: 24px;
   }
 
@@ -774,9 +786,8 @@ hr {
     gap: 0;
   }
 
-  #contact-button-lager{
+  #contact-button-lager {
     margin-top: 0;
-    
   }
 
   .smallscreen-hr {
@@ -786,8 +797,18 @@ hr {
     visibility: visible;
   }
 
-  #map{
+  #map {
     width: 80%;
-margin-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  #scroll-to-contact-form {
+    padding: 20px;
+    height: 100px;
+    text-align: left;
+  }
+
+  #contact-span {
+    padding-left: 0;
   }
 }
