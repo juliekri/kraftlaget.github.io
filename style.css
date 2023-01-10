@@ -643,7 +643,7 @@ hr {
   }
 
   #kraftlaget-img {
-    opacity: 0.3;
+    opacity: 0.5;
     position: absolute;
     object-fit: cover;
     width: 100%;
