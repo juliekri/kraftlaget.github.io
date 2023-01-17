@@ -1,3 +1,5 @@
+let smallscreen = window.outerWidth;
+
 function navLinksOnClick(event) {
   let selected = document.querySelectorAll(".nav-link[selected='active-link']");
   let selectedItem = event.target.parentElement;
@@ -6,6 +8,29 @@ function navLinksOnClick(event) {
   });
   selectedItem.setAttribute("selected", "active-link");
   return;
+}
+
+function sizeHandler() {
+  smallscreen = window.innerWidth;
+  if (smallscreen > 1200) {
+    hamburgerMenu = false;
+  } else {
+    hamburgerMenu = true;
+  }
+}
+window.onresize = sizeHandler;
+window.onload = sizeHandler;
+
+function handleShowDropDown(event) {
+  event.target.parentElement;
+
+  let hideDropDown = document.querySelector(".showDropDown.hide");
+
+  if (hideDropDown) {
+    document.querySelector(".showDropDown").classList.remove("hide");
+  } else if (!hideDropDown) {
+    document.querySelector(".showDropDown").classList.add("hide");
+  }
 }
 
 function scrollToId(event) {
@@ -39,42 +64,85 @@ function contactForm() {
   return;
 }
 
-const input = document.querySelectorAll("input");
-let button = document.querySelector(".submit-button");
-
-button.disabled = true;
-
 function stateHandle() {
+  let input = document.querySelectorAll("input");
+  let button = document.querySelector(".submit-button");
+
   input.forEach((input) => {
-    if (!input.value) {
+    if (input.value === "") {
       button.disabled = true;
-    } else {
-      button.disabled = false;
+      return;
     }
+
+    button.disabled = false;
   });
 }
 
-let smallscreen = window.outerWidth;
+function updateValues(event) {
+  let input = document.querySelectorAll("input");
 
-function sizeHandler() {
-  smallscreen = window.innerWidth;
-  if (smallscreen > 1200) {
-    hamburgerMenu = false;
-  } else {
-    hamburgerMenu = true;
-  }
+  input.forEach((input) => {
+    input.addEventListener("input", stateHandle);
+  });
 }
-window.onresize = sizeHandler;
-window.onload = sizeHandler;
 
-function handleShowDropDown(event) {
-  event.target.parentElement;
-
-  let hideDropDown = document.querySelector(".showDropDown.hide");
-
-  if (hideDropDown) {
-    document.querySelector(".showDropDown").classList.remove("hide");
-  } else if (!hideDropDown) {
-    document.querySelector(".showDropDown").classList.add("hide");
+function getAPI() {
+  const inputFields = document.querySelectorAll(".input");
+  const query = {
+    name: "",
+    mail: "",
+    subject: "",
+    message: "",
+    phone: "",
+    company: "",
+  };
+  if (!inputFields.length) {
+    return;
   }
+  inputFields.forEach((field) => {
+    const name = field.name;
+    switch (name) {
+      case "name":
+        query.name = name;
+        break;
+      case "mail":
+        query.mail = name;
+        break;
+      case "subject":
+        query.subject = name;
+        break;
+      case "message":
+        query.message = name;
+        break;
+    }
+  });
+
+  if (!query) {
+    return;
+  }
+
+  const myHeaders = new Headers({
+    "content-type": "application/json; charset=UTF-8",
+    accept: "application/json",
+  });
+
+  return fetch("http://api.hulbekkmo.no/customer_request", {
+    method: "POST",
+    headers: myHeaders,
+    body: JSON.stringify(query),
+  })
+    .then((json) => {
+      json.body.then((response) => {
+        console.log(response);
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}
+const url = new URLSearchParams(location.search);
+const isTest = url.has("test");
+
+if (isTest) {
+  document.querySelector(".contact-form-container").style.display = "flex";
 }

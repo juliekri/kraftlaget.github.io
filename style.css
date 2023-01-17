@@ -399,6 +399,7 @@ ul {
   background-color: #fff;
   justify-content: center;
   gap: 45px;
+  display: none;
 }
 
 .contact-form {
