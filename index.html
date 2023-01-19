@@ -98,7 +98,7 @@
           class="products-box"
           id="scroll-to-meeting-room"
           onclick="scrollToId(event)"
-        >
+          >
           <h1 class="product-header" id="scroll-to-meeting-room">MØTEROM</h1>
           <span class="product-span" id="scroll-to-meeting-room"
             >Møterom ligger i Kraftlagets lokaler i 2. etasje, ta kontakt for
@@ -111,12 +111,12 @@
               src="images/kontor.svg"
             />
           </div>
-        </div>
-        <div
+         </div>
+         <div
           class="products-box"
           id="scroll-to-minilager"
           onclick="scrollToId(event)"
-        >
+          >
           <h1 class="product-header" id="scroll-to-minilager">MINILAGER</h1>
           <span class="product-span" id="scroll-to-minilager"
             >Minilagerne ligger i Kraftlagets lokaler, og består av minilager på
@@ -348,24 +348,12 @@
       </div>
     </div>
     <div id="scroll-to-contact-form">
-      <span id="contact-span">
-        Ring
-        <span style="font-size: 20px; color: #00b9d1"
-          >+47 959 81 415</span
-        >
-        eller send e-post til
-        <span style="font-size: 20px; color: #00b9d1"
-          ><a href="mailto: firmapost@kraftlaget.no" style="color: #00b9d1"
-            >firmapost@kraftlagetsolor.no</a
-          ></span
-        >
-        for en hyggelig prat.
-      </span>
+    
     </div>
    
     <div class="contact-form-container" id="contact-form">
       <iframe id="map" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJG8Q7KHYSQkYRQeSFeOYs1Bw&key=AIzaSyBzeZ9O8SmVKWsG8cwtslVN9CPyDtC5d9Q"></iframe>
-      <form class="contact-form"  name="form">
+      <div class="contact-form"  name="form">
         <h1 style="color: #132C4F">KONTAKT OSS</h1>
         <input
           onchange="updateValues(event)"
@@ -385,7 +373,7 @@
           name="mail"
           required
         />
-        <input
+         <input
           onchange="updateValues(event)"
           type="text"
           class="input"
@@ -404,11 +392,15 @@
           name="message"
           required
         />
-        
-      </form><div style="padding: 20px; display: flex; justify-content: center">
+        <div style=" display: flex; justify-content: center">
           <button class="submit-button" onclick="getAPI()" disabled>Send inn</button>
+
         </div>
+        
+      </div>
     </div>
+    <div class="snackbar-container">
+     <div class="snackbar"> <span id="mail-confirm">Takk for din henvendelse, du vil høre fra oss så snart meldingen din er behandlet.</span></div></div>
     <footer>
       <div
         style="
@@ -419,13 +411,14 @@
           background-color: #212330;
           height: 166px;
         "
-      >
+         >
         <div class="logo-footer">
           <img class="logo-img" src="images/logo2.png" />
         </div>
         <span style="font-size: 18px; color: #fefefe"><i>Midt i Solør</i></span>
       </div>
     </footer>
+   
     <script src="script.js"></script>
   </body>
 </html>

@@ -80,14 +80,15 @@ function stateHandle() {
 
 function updateValues(event) {
   let input = document.querySelectorAll("input");
-
   input.forEach((input) => {
     input.addEventListener("input", stateHandle);
   });
 }
 
-function getAPI() {
+async function getAPI() {
   const inputFields = document.querySelectorAll(".input");
+  let button = document.querySelector(".submit-button");
+
   const query = {
     name: "",
     mail: "",
@@ -96,23 +97,24 @@ function getAPI() {
     phone: "",
     company: "",
   };
+
   if (!inputFields.length) {
     return;
   }
   inputFields.forEach((field) => {
-    const name = field.name;
+    const { name, value } = field;
     switch (name) {
       case "name":
-        query.name = name;
+        query.name = value;
         break;
       case "mail":
-        query.mail = name;
+        query.mail = value;
         break;
       case "subject":
-        query.subject = name;
+        query.subject = "Henvendelse skjema: " + value;
         break;
       case "message":
-        query.message = name;
+        query.message = value;
         break;
     }
   });
@@ -126,20 +128,23 @@ function getAPI() {
     accept: "application/json",
   });
 
-  return fetch("http://api.hulbekkmo.no/customer_request", {
-    method: "POST",
-    headers: myHeaders,
-    body: JSON.stringify(query),
-  })
-    .then((json) => {
-      json.body.then((response) => {
-        console.log(response);
-      });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+  const sendServiceMailResult = await fetch(
+    "http://api.hulbekkmo.no/customer_request",
+    {
+      method: "POST",
+      headers: myHeaders,
+      body: JSON.stringify(query),
+    }
+  );
+  if (sendServiceMailResult.ok) {
+    const snackbar = document.querySelector(".snackbar");
+    if (snackbar) {
+      snackbar.style.visibility = "visible";
+      button.disabled = true;
+    }
+  }
 }
+
 const url = new URLSearchParams(location.search);
 const isTest = url.has("test");
 

@@ -392,7 +392,7 @@ ul {
 
 .contact-form-container {
   width: 100%;
-  height: 520px;
+  height: 440px;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -481,15 +481,33 @@ hr {
 
 #scroll-to-contact-form {
   height: 40px;
-  text-align: center;
-  padding: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 #contact-span {
   font-size: 20px;
   color: #677fa0;
+}
+
+.snackbar-container {
+  width: 68%;
+  display: flex;
+  justify-content: center;
+}
+
+.snackbar {
+  visibility: visible;
+  z-index: 999;
+  background-color: #fff;
+  width: 500px;
+  height: 60px;
+  border-radius: 10px;
+  border: 2px solid #00bcd4;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+#mail-confirm {
+  font-size: 20px;
+  color: #6f7599;
 }
 
 @media screen and (max-width: 1200px) {
@@ -803,13 +821,18 @@ hr {
     margin-bottom: 20px;
   }
 
-  #scroll-to-contact-form {
-    padding: 20px;
-    height: 100px;
-    text-align: left;
-  }
-
   #contact-span {
     padding-left: 0;
+  }
+
+  .snackbar {
+    width: 364px;
+    height: 50px;
+    margin-left: 0;
+  }
+  .snackbar-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 }
