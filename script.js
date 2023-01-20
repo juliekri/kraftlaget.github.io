@@ -111,7 +111,7 @@ async function getAPI() {
         query.mail = value;
         break;
       case "subject":
-        query.subject = "Henvendelse skjema: " + value;
+        query.subject = "Henvendelse: " + value;
         break;
       case "message":
         query.message = value;
