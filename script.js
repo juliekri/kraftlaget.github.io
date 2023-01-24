@@ -82,6 +82,7 @@ function updateValues(event) {
   let input = document.querySelectorAll("input");
   input.forEach((input) => {
     input.addEventListener("input", stateHandle);
+    input.addEventListener("touchstart", stateHandle);
   });
 }
 
@@ -137,17 +138,10 @@ async function getAPI() {
     }
   );
   if (sendServiceMailResult.ok) {
-    const snackbar = document.querySelector(".snackbar");
+    const snackbar = document.querySelector(".snackbar-container");
     if (snackbar) {
       snackbar.style.visibility = "visible";
       button.disabled = true;
     }
   }
-}
-
-const url = new URLSearchParams(location.search);
-const isTest = url.has("test");
-
-if (isTest) {
-  document.querySelector(".contact-form-container").style.display = "flex";
 }

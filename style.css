@@ -399,7 +399,6 @@ ul {
   background-color: #fff;
   justify-content: center;
   gap: 45px;
-  display: none;
 }
 
 .contact-form {
@@ -491,10 +490,10 @@ hr {
   width: 68%;
   display: flex;
   justify-content: center;
+  visibility: hidden;
 }
 
 .snackbar {
-  visibility: hidden;
   z-index: 999;
   background-color: #fff;
   width: 500px;
