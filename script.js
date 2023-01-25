@@ -69,7 +69,8 @@ function stateHandle() {
   let button = document.querySelector(".submit-button");
 
   input.forEach((input) => {
-    if (input.value === "") {
+    if (!input.value) {
+      console.log("het");
       button.disabled = true;
       return;
     }
@@ -81,8 +82,7 @@ function stateHandle() {
 function updateValues(event) {
   let input = document.querySelectorAll("input");
   input.forEach((input) => {
-    input.addEventListener("input", stateHandle);
-    input.addEventListener("touchstart", stateHandle);
+    input.addEventListener("change", stateHandle);
   });
 }
 
