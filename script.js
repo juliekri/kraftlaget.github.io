@@ -70,12 +70,11 @@ function stateHandle() {
 
   input.forEach((input) => {
     if (!input.value) {
-      console.log("het");
       button.disabled = true;
       return;
+    } else {
+      button.disabled = false;
     }
-
-    button.disabled = false;
   });
 }
 
