@@ -82,7 +82,7 @@ function stateHandle() {
 function updateValues(event) {
   let input = document.querySelectorAll("input");
   input.forEach((input) => {
-    input.addEventListener("change", stateHandle);
+    input.addEventListener("input", stateHandle);
   });
 }
 
