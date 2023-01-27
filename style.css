@@ -830,7 +830,7 @@ hr {
     align-items: center;
   }
   .snackbar-container {
-    display: flex;
+    display: none;
     justify-content: center;
     width: 100%;
   }
