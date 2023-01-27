@@ -484,10 +484,8 @@ hr {
 }
 
 .snackbar-container {
-  width: 68%;
-  display: flex;
+  display: none;
   justify-content: center;
-  visibility: hidden;
 }
 
 .snackbar {
@@ -796,7 +794,7 @@ hr {
   }
 
   .contact-form-container {
-    height: 700px;
+    height: 760px;
     flex-direction: column-reverse;
     gap: 0;
   }
@@ -822,12 +820,13 @@ hr {
   }
 
   .snackbar {
-    width: 364px;
-    height: 50px;
+    width: 320x;
+    height: 80px;
     margin-left: 0;
+    padding: 24px;
   }
   .snackbar-container {
-    display: flex;
+    display: none;
     justify-content: center;
     width: 100%;
   }

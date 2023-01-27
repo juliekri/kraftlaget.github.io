@@ -138,7 +138,7 @@ async function getAPI() {
   if (sendServiceMailResult.ok) {
     const snackbar = document.querySelector(".snackbar-container");
     if (snackbar) {
-      snackbar.style.visibility = "visible";
+      snackbar.style.display = "flex";
       button.disabled = true;
     }
   }
