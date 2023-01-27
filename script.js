@@ -144,7 +144,7 @@ async function getAPI() {
   }
 }
 
-function hideContactForm() {
+/*function hideContactForm() {
   const contactFormView = document.querySelector(".contact-form-container");
   const snackBarView = document.querySelector(".snackbar-container");
   if (smallscreen < 1200) {
@@ -159,4 +159,4 @@ function hideContactForm() {
 }
 
 window.onload = hideContactForm;
-window.onresize = hideContactForm;
+window.onresize = hideContactForm; */
