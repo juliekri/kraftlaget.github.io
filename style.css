@@ -823,11 +823,15 @@ hr {
     width: 320x;
     height: 80px;
     margin-left: 0;
-    padding: 24px;
+    padding: 9px 0px 0px 7px;
   }
   .snackbar-container {
-    display: none;
+    display: flex;
     justify-content: center;
     width: 100%;
+  }
+
+  #mail-confirm {
+    font-size: 15px;
   }
 }
