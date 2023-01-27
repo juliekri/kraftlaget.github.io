@@ -128,7 +128,7 @@ async function getAPI() {
   });
 
   const sendServiceMailResult = await fetch(
-    "http://api.hulbekkmo.no/customer_request",
+    "https://api.hulbekkmo.no/customer_request",
     {
       method: "POST",
       headers: myHeaders,
@@ -153,8 +153,8 @@ function hideContactForm() {
     snackBarView.style.display = "none";
   } else {
     smallscreen = window.innerWidth;
-    contactFormView.style.display = "flex";
-    snackBarView.style.display = "flex";
+    contactFormView.style.display = "none";
+    snackBarView.style.display = "none";
   }
 }
 
