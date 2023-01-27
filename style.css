@@ -75,7 +75,7 @@ ul {
   height: 70px;
   align-items: center;
   position: fixed;
-  z-index: 100;
+  z-index: 999;
   background-color: #212330;
   width: 100%;
 }
@@ -489,7 +489,7 @@ hr {
 }
 
 .snackbar {
-  z-index: 999;
+  z-index: 800;
   background-color: #fff;
   width: 500px;
   height: 60px;
@@ -560,7 +560,7 @@ hr {
   }
   .a-smallscreen {
     color: #fefefe;
-    padding: 16px;
+    padding: 20px 0px 14px 25px;
   }
 
   .a-smallscreen:hover {
