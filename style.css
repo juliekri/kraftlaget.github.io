@@ -821,9 +821,10 @@ hr {
 
   .snackbar {
     width: 320x;
-    height: 80px;
+    height: 70px;
     margin-left: 0;
     padding: 9px 0px 0px 7px;
+    text-align: left;
   }
   .snackbar-container {
     display: flex;
