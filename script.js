@@ -143,20 +143,3 @@ async function getAPI() {
     }
   }
 }
-
-/*function hideContactForm() {
-  const contactFormView = document.querySelector(".contact-form-container");
-  const snackBarView = document.querySelector(".snackbar-container");
-  if (smallscreen < 1200) {
-    smallscreen = window.innerWidth;
-    contactFormView.style.display = "none";
-    snackBarView.style.display = "none";
-  } else {
-    smallscreen = window.innerWidth;
-    contactFormView.style.display = "none";
-    snackBarView.style.display = "none";
-  }
-}
-
-window.onload = hideContactForm;
-window.onresize = hideContactForm; */
