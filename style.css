@@ -26,6 +26,9 @@ ul {
 
 .navbar-container {
   width: 70%;
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
 }
 
 .navbar-container ul li {
@@ -61,6 +64,7 @@ ul {
 .nav-link[selected="active-link"] .underline {
   background-color: #33bcdb;
   width: 100%;
+  transform: scale(1.1);
 }
 
 .navbar-container ul li:hover a {
@@ -71,7 +75,7 @@ ul {
 .header {
   display: flex;
   flex-direction: row;
-  padding: 10px 0px 10px 150px;
+  padding: 10px 0px 10px 100px;
   height: 70px;
   align-items: center;
   position: fixed;
@@ -82,7 +86,7 @@ ul {
 
 .logo-header {
   font-size: 30px;
-  width: 30%;
+  width: 26%;
 }
 
 .logo-footer {
@@ -103,6 +107,7 @@ ul {
   display: flex;
   width: 100vw;
   position: relative;
+  height: 800px;
 }
 .image {
   width: 100%;
@@ -502,6 +507,14 @@ hr {
 #mail-confirm {
   font-size: 20px;
   color: #6f7599;
+}
+
+.product-container-kraftlaget {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 600px;
+  align-items: center;
 }
 
 @media screen and (max-width: 1200px) {

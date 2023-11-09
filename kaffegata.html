@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="kontor, office, minilager, lager, leie, utleie, firma, fleksibelt, fleksible, fiber, nett, internett, moderne, modern, lyst, kvalitet, flisa, solør, 2270, snekkarbakkveien"
+    />
+    <title>Kaffegata</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo-header">
+        <img class="logo-img" src="images/logo2.png" />
+      </div>
+      <div class="navbar-container">
+        <ul>
+          <li class="nav-link">
+            <a href="index.html">KRAFTLAGET</a>
+            <div class="underline"></div>
+          </li>
+          <li class="nav-link" selected="active-link">
+            <a href="kaffegata.html">KAFFEGATA 48</a>
+            <div class="underline"></div>
+          </li>
+        </ul>
+        <ul>
+          <li class="nav-link" onclick="navLinksOnClick(event)">
+            <a href="#about-us">OM OSS</a>
+            <div class="underline"></div>
+          </li>
+          <li class="nav-link" onclick="navLinksOnClick(event)">
+            <a href="#we-offer">VI TILBYR</a>
+            <div class="underline"></div>
+          </li>
+          <li class="nav-link" onclick="navLinksOnClick(event)">
+            <a href="#contact-form">KONTAKT OSS</a>
+            <div class="underline"></div>
+          </li>
+        </ul>
+
+        <div class="hamburger" onclick="handleShowDropDown(event)">
+          <span id="navBar" class="bar"></span>
+          <span id="navBar" class="bar"></span>
+          <span id="navBar" class="bar"></span>
+        </div>
+        <div class="showDropDown">
+          <a class="a-smallscreen" onclick="handleShowDropDown(event)" href="#"
+            >HJEM
+          </a>
+          <a
+            class="a-smallscreen"
+            onclick="handleShowDropDown(event)"
+            href="#about-us"
+            >OM OSS</a
+          >
+          <a
+            class="a-smallscreen"
+            onclick="handleShowDropDown(event)"
+            href="#we-offer"
+            >VI TILBYR</a
+          >
+          <a
+            class="a-smallscreen"
+            onclick="handleShowDropDown(event)"
+            href="#contact-form"
+            >KONTAKT OSS</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="image-container">
+      <img
+        style="object-fit: cover; object-position: top"
+        class="image"
+        src="images\kaffegata.jpg"
+      />
+      <div class="text-container">
+        <h1 id="header-front-image">Minilager til leie midt i Kaffegata</h1>
+        <span id="sub-header-front-image"
+          >Vi kan tilby leie av
+          <span style="color: #212330; font-weight: 800">minilager</span> i
+          ulike størrelser, midt i sentrum</span
+        >
+      </div>
+    </div>
+    <hr />
+    <div id="we-offer"></div>
+    <div class="product-container-kraftlaget">
+      <div style="width: 40%">
+        <h1 style="color: #132c4f">VI TILBYR</h1>
+        <span id="we-offer-text"
+          >I kjelleretasjen er det muligheter for å leie
+          <span style="color: #00b9d1; font-weight: 800">minilager</span> på 5
+          &#13217; eller 10 &#13217;
+          <br />
+          Her er det lett å komme til med bil og henger.
+          <br />
+          <br />
+          Ta kontakt på tlf.
+          <span style="font-weight: 800; color: #00b9d1">95981415</span> eller
+          på e-post
+          <a href="" style="color: #00b9d1">firmapost@kraftlagetsolor.no</a
+          ><br />
+          Dere er velkomne til en uforpliktende, hyggelig prat med deres
+          ønsker.</span
+        >
+      </div>
+
+      <img
+        style="height: 450px; width: 25%"
+        src="images/minilager.jpg"
+        alt=""
+      />
+    </div>
+    <hr />
+    <div
+      class="contact-form-container"
+      id="contact-form"
+      style="margin-top: 30px"
+    >
+      <iframe
+        id="map"
+        loading="lazy"
+        allowfullscreen
+        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJG2E9KY0NQkYRJQL5VXvqBD0&key=AIzaSyBzeZ9O8SmVKWsG8cwtslVN9CPyDtC5d9Q"
+      ></iframe>
+      <div class="contact-form" name="form">
+        <h1 style="color: #132c4f">KONTAKT OSS</h1>
+        <input
+          onchange="updateValues(event)"
+          type="text"
+          class="input"
+          placeholder="Navn"
+          label="Ditt navn"
+          name="name"
+          required
+        />
+        <input
+          onchange="updateValues(event)"
+          placeholder="E-post"
+          type="email"
+          class="input"
+          label="Din e-postadresse"
+          name="mail"
+          required
+        />
+        <input
+          onchange="updateValues(event)"
+          type="text"
+          class="input"
+          placeholder="Emne"
+          label="Emne"
+          name="subject"
+          required
+        />
+        <input
+          onchange="updateValues(event)"
+          type="text"
+          style="padding: 20px 0px 20px 10px"
+          placeholder="Hva lurer du på?"
+          class="input"
+          label="Din henvendelse"
+          name="message"
+          required
+        />
+        <div style="display: flex; justify-content: center">
+          <button class="submit-button" onclick="getAPI()" disabled>
+            Send inn
+          </button>
+        </div>
+        <div class="snackbar-container">
+          <div class="snackbar">
+            <span id="mail-confirm"
+              >Takk for din henvendelse, du vil høre fra oss så snart din
+              forespørsel er behandlet.</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          background-color: #212330;
+          height: 166px;
+        "
+      >
+        <div class="logo-footer">
+          <img class="logo-img" src="images/logo2.png" />
+        </div>
+        <span style="font-size: 18px; color: #fefefe"><i>Midt i Solør</i></span>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
