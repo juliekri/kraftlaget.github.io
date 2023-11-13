@@ -103,28 +103,49 @@ ul {
 .showDropDown {
   display: none;
 }
-.image-container {
+
+.text-image-container {
   display: flex;
-  width: 100vw;
+  flex-direction: row-reverse;
   position: relative;
-  height: 800px;
+  top: 125px;
+  height: 600px;
+  width: 100%;
+}
+
+.image-container {
+  width: 50%;
+  height: 600px;
+  padding-right: 20px;
 }
 .image {
-  width: 100%;
-  height: auto;
   border-radius: 10px;
-  opacity: 0.4;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .text-container {
   color: #212330;
   font-size: 32px;
-  margin: 0 auto;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#header-front-image {
+  padding-left: 80px;
+}
+
+#sub-header-front-image {
+  padding-left: 80px;
+}
+
+.vertical-line {
+  border-left: 6px solid #00bbd3;
+  height: 250px;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  left: 50px;
 }
 
 .product-container {
@@ -463,7 +484,7 @@ li * {
 }
 
 hr {
-  margin-top: 30px;
+  margin-top: 160px;
   color: #55c3dd;
   width: 65%;
 }
@@ -515,6 +536,8 @@ hr {
   justify-content: center;
   height: 600px;
   align-items: center;
+  flex-direction: row-reverse;
+  gap: 100px;
 }
 
 @media screen and (max-width: 1200px) {
