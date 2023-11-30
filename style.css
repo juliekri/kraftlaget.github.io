@@ -111,6 +111,7 @@ ul {
   top: 125px;
   height: 600px;
   width: 100%;
+  gap: 20px;
 }
 
 .image-container {
@@ -540,6 +541,16 @@ hr {
   gap: 100px;
 }
 
+.text-container-product-kraftlaget {
+  width: 40%;
+}
+
+.minilager-kaffegata-img {
+  height: 450px;
+  width: 25%;
+  border-radius: 10px;
+}
+
 @media screen and (max-width: 1200px) {
   ul {
     display: none;
@@ -561,6 +572,11 @@ hr {
     justify-content: space-between;
   }
 
+  #we-offer-text {
+    padding-left: 10px;
+    padding-bottom: 40px;
+  }
+
   .logo-img {
     width: 200px;
   }
@@ -580,7 +596,7 @@ hr {
 
   .showDropDown.hide {
     width: 100%;
-    height: 290px;
+    height: 333px;
     background-color: #212330;
     transform: translate(-118px, 21px);
     border-radius: 10px;
@@ -616,25 +632,26 @@ hr {
   #header-front-image {
     font-size: 26px;
     color: #212330de;
+    padding-left: 0;
   }
 
   #sub-header-front-image {
     font-size: 20px;
     color: #212330de;
     font-weight: bold;
+    padding-left: 0;
   }
 
   .image-container {
-    top: 62px;
-    display: inline-block;
+    width: 100%;
+    object-fit: cover;
+    height: auto;
   }
 
   .image {
-    max-width: 100% !important;
-    max-height: 100% !important;
-    height: 220px;
-    border-radius: 0px;
-    opacity: 0.5;
+    object-position: top;
+    object-fit: scale-down;
+    width: 96%;
   }
 
   .text-container {
@@ -650,12 +667,23 @@ hr {
   h1 {
     font-size: 22px;
     margin-top: 20px;
-    align-self: center;
+    padding-left: 10px;
   }
 
   .product-container {
     height: 24%;
     align-items: flex-start;
+  }
+
+  .product-container-kraftlaget {
+    flex-direction: column;
+    height: auto;
+    gap: 40px;
+  }
+
+  .text-container-product-kraftlaget {
+    width: 100%;
+    padding-left: 10px;
   }
 
   .products {
@@ -673,9 +701,13 @@ hr {
     padding-left: 0px;
   }
 
+  .offer-heading {
+    align-self: center;
+  }
+
   .about-text {
     line-height: 0;
-    width: 100%;
+    width: 96%;
     padding: 20px;
     margin-left: 0px;
     z-index: 4;
@@ -688,13 +720,13 @@ hr {
     padding-top: 0;
   }
 
-  #we-offer-text {
-    padding: 20px;
-  }
-
   #about-us-text {
     font-size: 18px;
-    color: #132c4f;
+  }
+
+  .minilager-kaffegata-img {
+    width: 90%;
+    height: auto;
   }
 
   .about-img {
@@ -704,16 +736,14 @@ hr {
   }
 
   #kraftlaget-img {
-    opacity: 0.4;
-    position: absolute;
-    object-fit: cover;
-    width: 100%;
-    height: 363px;
-    right: 0px;
+    width: 98%;
+    height: auto;
+    align-self: center;
   }
 
   .about-us-container {
-    height: 363px;
+    height: auto;
+    flex-direction: column;
   }
 
   #meeting-room-flisa {
@@ -873,5 +903,20 @@ hr {
 
   #mail-confirm {
     font-size: 15px;
+  }
+
+  .text-image-container {
+    flex-direction: column-reverse;
+    padding-top: 85px;
+    gap: 40px;
+    position: unset;
+    top: 0;
+    height: auto;
+    width: 100%;
+    padding-left: 6px;
+  }
+
+  .vertical-line {
+    display: none;
   }
 }
