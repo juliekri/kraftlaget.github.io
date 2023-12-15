@@ -125,6 +125,7 @@ async function getAPI() {
   const myHeaders = new Headers({
     "content-type": "application/json; charset=UTF-8",
     accept: "application/json",
+    Authorization: "dUxXd2RJnHMYcw9qgHPjKED6M6qrCdnpfs",
   });
 
   const sendServiceMailResult = await fetch(
